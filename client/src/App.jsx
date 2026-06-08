@@ -8,7 +8,7 @@ function App() {
   const [form, setForm] = useState({ name: "", email: "" });
 
   useEffect(() => {
-    axios.get("https://firstdep-k5tw.onrender.com/").then((res) => {
+    axios.get("https://firstdep-k5tw.onrender.com/users").then((res) => {
       setUsers(res.data);
     });
   }, []);

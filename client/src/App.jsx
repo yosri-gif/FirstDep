@@ -16,9 +16,9 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("https://firstdep-k5tw.onrender.com/", form);
+    await axios.post("https://firstdep-k5tw.onrender.com/users", form);
     setForm({ name: "", email: "" });
-    const res = await axios.get("https://firstdep-k5tw.onrender.com/");
+    const res = await axios.get("https://firstdep-k5tw.onrender.com/users");
     setUsers(res.data);
   };
 
